@@ -12,9 +12,9 @@ leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
   setView(-122.667, 45.526, 13) %>%
   addEsriFeatureLayer(
-    url='https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0',
+    url = 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0',
     useServiceSymbology = TRUE,
-    labelProperty = 'COMMON_NAM', labelOptions=labelOptions(textsize = '12px'),
+    labelProperty = 'COMMON_NAM', labelOptions = labelOptions(textsize = '12px'),
     popupProperty = JS("function(feature) { return L.Util.template('<h3>{COMMON_NAM}</h3><hr /><p>This tree is located at {ADDRESS} and its scientific name is {SCIENTIFIC}.', feature.properties);}"))
 
 #' ### Example 2 & 3
@@ -46,7 +46,7 @@ leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
   setView(-122.667, 45.526, 15) %>%
   addEsriFeatureLayer(
-    url='https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0', layerId = 'busStops',
+    url = 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0', layerId = 'busStops',
     labelProperty = 'stop_name',
     markerIconProperty = 'direction',
     markerOptions = markerOptions(opacity = 0.8, riseOnHover = TRUE),
@@ -69,7 +69,7 @@ leaflet() %>%
   addEsriBasemapLayer(esriBasemapLayers$Streets) %>%
   setView(-122.667, 45.526, 15) %>%
   addEsriFeatureLayer(
-    url='https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0', layerId = 'busStops',
+    url = 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0', layerId = 'busStops',
     labelProperty = 'stop_name',
     markerIconProperty = 'direction',
     markerOptions = markerOptions(opacity = 0.8, riseOnHover = TRUE),
@@ -114,8 +114,8 @@ leaflet() %>%
     labelProperty = JS("function(feature){var props = feature.properties; return props.LAST_NAME+', '+props.NAME+ ' ['+props.PARTY+']'}"),
     popupProperty = JS("function(feature){var props = feature.properties; return props.LAST_NAME+', '+props.NAME+ ' ['+props.PARTY+']'}"),
     color = '#000000', weight = 1, fillOpacity = 0.5,
-    highlightOptions = highlightOptions(weight=2, fillOpacity=0.8, bringToFront=TRUE,
-                                        sendToBack=TRUE),
+    highlightOptions = highlightOptions(weight = 2, fillOpacity = 0.8, bringToFront = TRUE,
+                                        sendToBack = TRUE),
     options = featureLayerOptions(
       simplifyFactor = 0.5, precision = 5,
       style = JS("function(feature){

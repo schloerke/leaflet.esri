@@ -15,7 +15,7 @@ html_files <- stringr::str_c(tools::file_path_sans_ext(r_files), 'html')
 
 r_files_mtimes <- file.info(r_files, extra_cols = FALSE)[, 4]
 
-df <- data.frame(r_file=r_files, r_file_mtime = r_files_mtimes,
+df <- data.frame(r_file = r_files, r_file_mtime = r_files_mtimes,
                  rmd_file = rmd_files, html_file = html_files,
                  stringsAsFactors = FALSE)
 

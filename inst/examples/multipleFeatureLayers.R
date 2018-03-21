@@ -10,7 +10,7 @@
 library(leaflet.esri)
 
 
-l <- leaflet(width='100%') %>% setView(-87.0369, 28.9072, 5)
+l <- leaflet(width = '100%') %>% setView(-87.0369, 28.9072, 5)
 
 
 # Add a choice of BaseMaps
@@ -18,9 +18,9 @@ purrr::walk(
   esriBasemapLayers,
   function(basemap) {
     l <<- l %>% addEsriBasemapLayer(
-      key=basemap, autoLabels=TRUE,
-      group=basemap,
-      options = list(detectRetina=TRUE))
+      key = basemap, autoLabels = TRUE,
+      group = basemap,
+      options = list(detectRetina = TRUE))
   })
 
 

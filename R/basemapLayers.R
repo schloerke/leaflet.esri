@@ -37,7 +37,7 @@ esriBasemapLabels <- list(
 #' @param options Basemap Layer Options. You can pass \code{\link[leaflet]{tileOptions}()}.
 #' @examples \dontrun{
 #' leaflet() %>%
-#'    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels=TRUE)
+#'    addEsriBasemapLayer(esriBasemapLayers$Oceans, autoLabels = TRUE)
 #' }
 #' @export
 addEsriBasemapLayer <- function(
