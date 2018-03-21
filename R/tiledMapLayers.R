@@ -41,7 +41,7 @@ addEsriTiledMapLayer <- function(
   layerId = NULL, group = NULL) {
 
   map <- addEsriDependency(map)
-  if(is.null(options)) {
+  if (is.null(options)) {
     options <- list()
   }
   leaflet::invokeMethod(

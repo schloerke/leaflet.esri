@@ -73,7 +73,7 @@ leaflet() %>%
       var hillshade =  map.layerManager._byLayerId['tile\\nhillshade'];
 
       map.on('click', function (e) {
-        if(identifiedPixel){
+        if (identifiedPixel){
           pane.innerHTML = 'Loading';
         }
         hillshade.identify().at(e.latlng).run(function(error, results){

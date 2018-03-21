@@ -146,7 +146,7 @@ addEsriFeatureLayer <- function(
   map$dependencies <- c(map$dependencies,
                         leaflet.extras::leafletExtrasDependencies$omnivore())
 
-  if(useServiceSymbology) {
+  if (useServiceSymbology) {
     map <- addEsriRenderersDependency(map)
   } else {
     map <- addEsriDependency(map)
@@ -157,19 +157,19 @@ addEsriFeatureLayer <- function(
     map <- addEsriClusterDependency(map)
   }
 
-  pathOptions = c(pathOptions, list(
+  pathOptions <- c(pathOptions, list(
     stroke = stroke, color = color, weight = weight, opacity = opacity,
     fill = fill, fillColor = fillColor, fillOpacity = fillOpacity,
     dashArray = dashArray, smoothFactor = smoothFactor, noClip = noClip))
 
   markerIconFunction <- NULL
-  if(!is.null(markerIcons)) {
-    if(inherits(markerIcons,'leaflet_icon_set') ||
+  if (!is.null(markerIcons)) {
+    if (inherits(markerIcons,'leaflet_icon_set') ||
        inherits(markerIcons, 'leaflet_icon')) {
       markerIconFunction <- defIconFunction
-    } else if(inherits(markerIcons,'leaflet_awesome_icon_set') ||
+    } else if (inherits(markerIcons,'leaflet_awesome_icon_set') ||
               inherits(markerIcons, 'leaflet_awesome_icon')) {
-      if(inherits(markerIcons,'leaflet_awesome_icon_set')) {
+      if (inherits(markerIcons,'leaflet_awesome_icon_set')) {
         libs <- unique(sapply(markerIcons,function(icon) icon$library))
         map <- leaflet.extras::addAwesomeMarkersDependencies(map,libs)
       } else {

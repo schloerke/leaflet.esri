@@ -51,7 +51,7 @@ leaflet() %>% setView(-99.88, 37.71, 4) %>%
 
 popupFunc <- htmlwidgets::JS(
   "function (error, featureCollection) {
-    if(error || featureCollection.features.length === 0) {
+    if (error || featureCollection.features.length === 0) {
       return false;
     } else {
     return 'Risk Level: ' + featureCollection.features[0].properties.CLASS_DESC;

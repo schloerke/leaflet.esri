@@ -120,9 +120,9 @@ leaflet() %>%
       simplifyFactor = 0.5, precision = 5,
       style = JS("function(feature){
                     var props = feature.properties;
-                    if(props.PARTY === 'Democrat'){
+                    if (props.PARTY === 'Democrat'){
                         return {fillColor: 'blue'};
-                    } else if(props.PARTY === 'Republican'){
+                    } else if (props.PARTY === 'Republican'){
                         return {fillColor: 'red'};
                     } else {
                         return {fillColor: 'white'};

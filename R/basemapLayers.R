@@ -47,16 +47,16 @@ addEsriBasemapLayer <- function(
 
   map <- addEsriDependency(map)
 
-  if(is.null(options)) {
+  if (is.null(options)) {
     options <- list()
   }
 
-  if(!(key %in% esriBasemapLayers || key %in% esriBasemapLabels)) {
+  if (!(key %in% esriBasemapLayers || key %in% esriBasemapLabels)) {
     stop("Invalid Basemap layer Key")
   }
 
   labelLayer <- NULL
-  if(autoLabels) {
+  if (autoLabels) {
     labelLayer <- esriBasemapLabels[[sprintf("%sLabels",key)]]
   }
 
