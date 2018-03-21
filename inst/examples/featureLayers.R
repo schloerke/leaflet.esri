@@ -113,8 +113,8 @@ leaflet() %>%
     url = 'https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Congressional_Districts/FeatureServer/0',
     labelProperty = JS("function(feature){var props = feature.properties; return props.LAST_NAME+', '+props.NAME+ ' ['+props.PARTY+']'}"),
     popupProperty = JS("function(feature){var props = feature.properties; return props.LAST_NAME+', '+props.NAME+ ' ['+props.PARTY+']'}"),
-    color = '#000000', weight =1 , fillOpacity = 0.5,
-    highlightOptions = highlightOptions(weight=2,fillOpacity=0.8,bringToFront=TRUE,
+    color = '#000000', weight = 1, fillOpacity = 0.5,
+    highlightOptions = highlightOptions(weight=2, fillOpacity=0.8, bringToFront=TRUE,
                                         sendToBack=TRUE),
     options = featureLayerOptions(
       simplifyFactor = 0.5, precision = 5,

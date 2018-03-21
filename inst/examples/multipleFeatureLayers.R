@@ -40,7 +40,7 @@ purrr::walk(names(layers), function(featureName) {
   l <<- l %>%
     addEsriFeatureLayer(
       url = sprintf('http://portal.gulfcouncil.org/arcgis/rest/services/CoralWorkingGroup/GMFMCCoralandCoralReefs/MapServer/%d', layers[[featureName]]),
-      useServiceSymbology = TRUE , group = featureName,
+      useServiceSymbology = TRUE, group = featureName,
       options = featureLayerOptions(useCors = FALSE))
 })
 

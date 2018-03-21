@@ -22,7 +22,7 @@ tiledMapLayerOptions <- function(
     proxy = proxy,
     useCors = useCors,
     token = token
-  ),tileOptions))
+  ), tileOptions))
 }
 
 #' Access tiles from ArcGIS Online and ArcGIS Server to visualize and identify features.

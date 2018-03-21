@@ -164,17 +164,17 @@ addEsriFeatureLayer <- function(
 
   markerIconFunction <- NULL
   if (!is.null(markerIcons)) {
-    if (inherits(markerIcons,'leaflet_icon_set') ||
+    if (inherits(markerIcons, 'leaflet_icon_set') ||
        inherits(markerIcons, 'leaflet_icon')) {
       markerIconFunction <- defIconFunction
-    } else if (inherits(markerIcons,'leaflet_awesome_icon_set') ||
+    } else if (inherits(markerIcons, 'leaflet_awesome_icon_set') ||
               inherits(markerIcons, 'leaflet_awesome_icon')) {
-      if (inherits(markerIcons,'leaflet_awesome_icon_set')) {
-        libs <- unique(sapply(markerIcons,function(icon) icon$library))
-        map <- leaflet.extras::addAwesomeMarkersDependencies(map,libs)
+      if (inherits(markerIcons, 'leaflet_awesome_icon_set')) {
+        libs <- unique(sapply(markerIcons, function(icon) icon$library))
+        map <- leaflet.extras::addAwesomeMarkersDependencies(map, libs)
       } else {
         map <- leaflet.extras::addAwesomeMarkersDependencies(
-          map,markerIcons$library)
+          map, markerIcons$library)
       }
       markerIconFunction <- awesomeIconFunction
     } else {

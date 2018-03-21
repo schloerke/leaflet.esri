@@ -57,7 +57,7 @@ addEsriBasemapLayer <- function(
 
   labelLayer <- NULL
   if (autoLabels) {
-    labelLayer <- esriBasemapLabels[[sprintf("%sLabels",key)]]
+    labelLayer <- esriBasemapLabels[[sprintf("%sLabels", key)]]
   }
 
   leaflet::invokeMethod(
