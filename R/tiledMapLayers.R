@@ -46,5 +46,5 @@ addEsriTiledMapLayer <- function(
   }
   leaflet::invokeMethod(
     map, leaflet::getMapData(map),
-    'addEsriTiledMapLayer', url, layerId, group, options)
+    "addEsriTiledMapLayer", url, layerId, group, options)
 }

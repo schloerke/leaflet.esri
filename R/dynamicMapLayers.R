@@ -5,7 +5,7 @@
 #' @param f Server response content type.
 #' @param attribution Attribution from service metadata copyright text is automatically displayed in Leaflet's default control. This property can be used for customization.
 #' @param layers An array of Layer IDs like [3, 4, 5] to show from the service.
-#' @param layerDefs A string representing a query to run against the service before the image is rendered. This can be a string like "3:STATE_NAME='Kansas'" or an object mapping different queries to specific layers {3:"STATE_NAME='Kansas'", 2:"POP2007>25000"}.
+#' @param layerDefs A string representing a query to run against the service before the image is rendered. This can be a string like "3:STATE_NAME="Kansas"" or an object mapping different queries to specific layers {3:"STATE_NAME="Kansas"", 2:"POP2007>25000"}.
 #' @param opacity Opacity of the layer. Should be a value between 0 (completely transparent) and 1 (completely opaque).
 #' @param position Position of the layer relative to other overlays.
 #' @param maxZoom Closest zoom level the layer will be displayed on the map.
@@ -17,14 +17,14 @@
 #' @param ... extra options
 #' @export
 dynamicMapLayerOptions <- function(
-  format = 'png24',
+  format = "png24",
   transparent = TRUE,
-  f = 'json',
-  attribution = '',
+  f = "json",
+  attribution = "",
   layers = NULL,
   layerDefs = NULL,
   opacity = 1,
-  position = 'front',
+  position = "front",
   maxZoom = NULL,
   minZoom = NULL,
   dynamicLayers = NULL,
@@ -82,6 +82,6 @@ addEsriDynamicMapLayer <- function(
   }
   leaflet::invokeMethod(
     map, leaflet::getMapData(map),
-    'addEsriDynamicMapLayer', url, layerId, group,
+    "addEsriDynamicMapLayer", url, layerId, group,
     options, popupFunction, popupOptions)
 }

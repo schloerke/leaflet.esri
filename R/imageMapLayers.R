@@ -24,10 +24,10 @@
 #' @param ... extra options
 #' @export
 imageMapLayerOptions <- function(
-  format = 'jpgpng',
-  f = 'json',
+  format = "jpgpng",
+  f = "json",
   opacity = 1,
-  position = 'front',
+  position = "front",
   maxZoom = NULL,
   minZoom = NULL,
   from = NULL,
@@ -91,6 +91,6 @@ addEsriImageMapLayer <- function(
   }
   leaflet::invokeMethod(
     map, leaflet::getMapData(map),
-    'addEsriImageMapLayer', url, layerId, group,
+    "addEsriImageMapLayer", url, layerId, group,
     options, popupFunction, popupOptions)
 }
