@@ -1,30 +1,30 @@
 #' Options for featureLayers.
 #'
-#' @param where	String	An optional expression to filter features server side.
+#' @param where String An optional expression to filter features server side.
 #'  String values should be denoted using single quotes ie: where: "FIELDNAME = 'field value'"; More information about valid SQL syntax can be found at \url{http://resources.arcgis.com/en/help/main/10.2/index.html#/SQL_reference_for_query_expressions_used_in_ArcGIS/00s500000033000000/}.
-#' @param minZoom	Integer	Minimum zoom level of the map that features will display.
+#' @param minZoom Integer Minimum zoom level of the map that features will display.
 #' example: minZoom:0
-#' @param maxZoom	Integer	Maximum zoom level of the map that features will
+#' @param maxZoom Integer Maximum zoom level of the map that features will
 #' example: maxZoom:19
-#' @param cacheLayers	Boolean	Will remove layers from the internal cache when they are removed from the map.
-#' @param fields	Array	An array of fieldnames to pull from the service.
+#' @param cacheLayers Boolean Will remove layers from the internal cache when they are removed from the map.
+#' @param fields Array An array of fieldnames to pull from the service.
 #' Includes all fields by default. You should always specify the name of the unique id for the service. Usually either 'FID' or 'OBJECTID'.
-#' @param from	Date	When paired with to defines the time range of features to display.
+#' @param from Date When paired with to defines the time range of features to display.
 #' Requires the Feature Layer to be time enabled.
-#' @param to	Date	When paired with from defines the time range of features to display.
+#' @param to Date When paired with from defines the time range of features to display.
 #' Requires the Feature Layer to be time enabled.
-#' @param timeField	false	The name of the field to lookup the time of the feature.
+#' @param timeField false The name of the field to lookup the time of the feature.
 #' Can be an object like {start:'startTime', end:'endTime'} or a string like 'created'.
-#' @param timeFilterMode	'server' (default) or 'client'	Determines where features are filtered by time.
+#' @param timeFilterMode 'server' (default) or 'client' Determines where features are filtered by time.
 #' By default features will be filtered by the server. If set to 'client' all features are requested and filtered by the app before display.
-#' @param simplifyFactor	Integer	How much to simplify polygons and polylines.
+#' @param simplifyFactor Integer How much to simplify polygons and polylines.
 #' More means better performance, and less means more accurate representation.
-#' @param precision	Integer	How many digits of precision to request from the server.
+#' @param precision Integer How many digits of precision to request from the server.
 #' Wikipedia has a great reference of digit precision to meters at \url{http://en.wikipedia.org/wiki/Decimal_degrees}.
-#' @param token	String	If you pass a token in your options it will be included in all requests to the service.
-#' @param proxy	URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
-#' @param useCors	Boolean	If this service should use CORS when making GET requests.
-#' @param renderer	L.svg or L.canvas	The vector renderer to use to draw the service.
+#' @param token String If you pass a token in your options it will be included in all requests to the service.
+#' @param proxy URL of an \href{https://developers.arcgis.com/javascript/jshelp/ags_proxy.html}{ArcGIS API for JavaScript proxy} or \href{https://github.com/Esri/resource-proxy}{ArcGIS Resource Proxy} to use for proxying requests.
+#' @param useCors Boolean If this service should use CORS when making GET requests.
+#' @param renderer L.svg or L.canvas The vector renderer to use to draw the service.
 #' Usually L.svg but setting to L.canvas contains performance benefits for large polygon layers.
 #' @param ... extra options
 #' @export
